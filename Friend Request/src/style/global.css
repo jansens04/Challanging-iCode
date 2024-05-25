@@ -1,0 +1,125 @@
+/*? global clearing */
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-container : #f8f5f5;
+  --bg-content: #fff;
+  --clr-txt: #242e4c;
+}
+
+body {
+  font-family:'Inter', sans-serif;
+  background:var(--bg-container);
+  display:grid;
+  place-items:center;
+  height: 100vh;
+}
+
+
+.content {
+  max-width: 500px;
+  width: 100%;
+  background:var(--bg-content) ;
+  padding: 3.5rem 2.5rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.content > * {
+  position: relative;
+  z-index: 999;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(130deg , #ff7a71,#ff9258);
+  border-radius: 0% 100% 19% 81% / 77% 48% 52% 103% ;
+  top: -50px;
+  right: -50px;
+}
+.content::after {
+  content: '';
+  position: absolute;
+  width: 230px;
+  height: 130px;
+  background: linear-gradient(130deg , #ff7a71,#ff9258);
+  border-radius: 50%;
+  /* transform: rotate(360deg); */
+  bottom: -90px;
+  left: -30px;
+}
+
+.content .content-header {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.content-header > h2 {
+  font-size: 19px;
+  color: var(--clr-txt);
+  font-weight: 750;
+}
+
+.content-header > span {
+  color: #f8f5f5;
+}
+
+.content-wrap {
+  margin-top: 2rem;
+}
+
+.content-wrap .content-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:1.8rem;
+}
+
+
+.content-info > div{ 
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.content-info > div  h3 {
+  font-size: 16px;
+  color: var(--clr-txt);
+}
+
+.content-info > div p {
+  color: var(--clr-txt);
+  font-size: 14px;
+  margin-top: 2px;
+}
+.content-info .btn-confirm {
+  box-shadow: 0 1px 2px #c2c2c2;
+  border-radius: 3px;
+  background: #fff;
+  text-decoration: none;
+  color: #242e4c;
+  padding: 8px 18px;
+  font-size: 15px;
+
+}
+.content img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media(max-width:500px) {
+  .content {
+    width: 90%;
+    height: auto;
+  }
+}

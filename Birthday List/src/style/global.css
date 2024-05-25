@@ -1,0 +1,83 @@
+/*? global clearing */
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --bg-container : #EF89B0;
+    --btn : linear-gradient(180deg, #E96DCC,#FA6AA6);
+    --bg-content:#fff;
+    --txt:#070707;
+}
+
+body {
+  font-family:'Inter', sans-serif;
+  display:grid;
+  place-items:center;
+  height:100vh;
+  background:var(--bg-container);
+}
+
+.content-birthday {
+  max-width: 350px;
+  width: 100%;
+  background: var(--bg-content);
+  padding: 2.3rem 2rem;
+  border-radius: 8px;
+}
+
+.content-birthday > h1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #565656;
+  margin-bottom: 25px;
+}
+
+.content-birthday .content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.content-birthday .content-info img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.content-birthday .content-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: .5rem;
+}
+
+.content-info h2 {
+  font-size: 18px;
+  font-weight: 550;
+  color: #565656;
+  margin-bottom: 4px;
+}
+
+.content-info p {
+  font-size: 15px;
+  color: #898989;
+}
+
+.content-birthday .btn-view {
+  background: var(--btn);
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  padding: 16px;
+  font-weight: 550;
+  color: var(--bg-content);
+  box-shadow: 0 1px 2px 1px #a3a3a3;
+}

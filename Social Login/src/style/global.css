@@ -1,0 +1,106 @@
+/*? global clearing */
+*,
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --bg-container: #F2F8FD;
+  --bg-social-login : #274AC2;
+  --bg-transparent : #7D93DE;
+  --txt:#fff;
+}
+
+body {
+  font-family:'Ubuntu';
+  background:var(--bg-container);
+  display:grid;
+  place-items:center;
+  height: 100vh;
+}
+
+.social-login{
+  position: relative;
+  max-width:800px;
+  width:100%;
+  background: var(--bg-social-login);
+  border-radius: 20px;
+  border: 14px solid rgb(212, 217, 245);
+  text-align:center;
+  padding-top: 4rem;
+  padding-bottom: 3.5rem;
+  color:var(--txt) ;
+}
+
+.social-header > h1 {
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.social-header > p {
+  width: 300px;
+  margin:.4rem auto;
+  color: #dddd;
+  font-size: 15px;
+  margin-bottom: .8rem;
+}
+
+
+.email-wrap { 
+  width: 300px;
+  height: 45px;
+  margin-inline: auto;
+  margin-top: 1rem;
+  background: #7D93DE;
+  border-radius:25px;
+  display: flex;
+  align-items: center;
+}
+
+.email-wrap > input {
+  width: 100%;
+  background: transparent;
+  height: 100%;
+  border-radius:25px;
+  border: none;
+  padding: 0 1rem;
+  outline: none;
+  color: var(--txt);
+}
+
+.email-wrap > input::selection {
+  background: #222;
+}
+.email-wrap > input::placeholder {
+  color: var(--txt);
+}
+
+.email-wrap > i {
+  color: #222;
+  font-size: 22px;
+  background: var(--txt);
+  margin-right: .3rem;
+  padding: .5rem;
+  border-radius: 50%;
+}
+
+.social-profile {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -50px;
+  width:550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.social-profile > img{
+  width: 70px;
+  height: 70px;
+  border: 5px solid var(--txt);
+  border-radius: 50%;
+  object-fit:cover;
+}
